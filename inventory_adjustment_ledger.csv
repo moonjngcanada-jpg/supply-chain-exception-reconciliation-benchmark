@@ -1,9 +1,0 @@
-adjustment_id,case_id,po_id,adjustment_type,quantity,amount_usd,posted_at_utc,notes
-ADJ-801,SCM-2026-801,PO-801,supplier_debit,0,0.00,2026-06-13T09:00:00Z,no debit
-ADJ-802,SCM-2026-802,PO-802,supplier_debit,0,0.00,2026-06-12T09:00:00Z,debit not posted
-ADJ-803,SCM-2026-803,PO-803,supplier_debit,-40,3500.00,2026-06-15T10:00:00Z,shortage and damage debit
-ADJ-804,SCM-2026-804,PO-804,supplier_debit,0,0.00,2026-06-18T10:00:00Z,no debit
-ADJ-805,SCM-2026-805,PO-805,supplier_debit,0,0.00,2026-06-20T10:00:00Z,no debit
-ADJ-806,SCM-2026-806,PO-806,supplier_debit,-20,4000.00,2026-06-23T10:00:00Z,shortage debit, approved by procurement
-ADJ-807,SCM-2026-807,PO-807,inventory_adjustment,20,0.00,2026-06-25T10:00:00Z,overreceipt adjustment pending
-ADJ-808,SCM-2026-808,PO-808,supplier_debit,0,0.00,2026-06-28T10:00:00Z,no debit
