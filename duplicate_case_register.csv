@@ -1,0 +1,2 @@
+case_id,record_role,duplicate_of_case_id,duplicate_reason
+SCM-2026-809,duplicate_only,SCM-2026-806,"same PO, supplier, SKU, quantity, event sequence, and intake issue"

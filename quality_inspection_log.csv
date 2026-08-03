@@ -1,0 +1,9 @@
+inspection_id,case_id,po_id,inspected_qty,rejected_qty,disposition,quality_hold_required,notes
+QI-801,SCM-2026-801,PO-801,100,0,released,false,accepted
+QI-802,SCM-2026-802,PO-802,220,0,released,false,accepted partial receipt
+QI-803,SCM-2026-803,PO-803,80,20,quarantine,true,20 units cracked
+QI-804,SCM-2026-804,PO-804,150,0,released,false,accepted
+QI-805,SCM-2026-805,PO-805,120,0,released,false,accepted
+QI-806,SCM-2026-806,PO-806,480,0,released,false,accepted partial receipt
+QI-807,SCM-2026-807,PO-807,80,0,released,false,accepted overreceipt
+QI-808,SCM-2026-808,PO-808,200,0,released,false,accepted

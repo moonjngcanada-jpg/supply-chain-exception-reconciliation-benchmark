@@ -1,0 +1,117 @@
+{
+  "case_intake_register.csv": [
+    "case_id",
+    "issue_type",
+    "requested_remediation",
+    "requested_expedite_usd",
+    "opened_at_utc",
+    "intake_priority"
+  ],
+  "purchase_order_register.csv": [
+    "case_id",
+    "po_id",
+    "supplier_id",
+    "supplier_name",
+    "supplier_tier",
+    "sku",
+    "ordered_qty",
+    "unit_cost_usd",
+    "original_required_date",
+    "receiving_site"
+  ],
+  "supplier_acknowledgements.csv": [
+    "ack_id",
+    "case_id",
+    "po_id",
+    "acknowledged_qty",
+    "promised_delivery_date",
+    "ack_status",
+    "notes"
+  ],
+  "revision_history.csv": [
+    "revision_id",
+    "case_id",
+    "revised_field",
+    "old_value",
+    "new_value",
+    "revision_status",
+    "approved_by",
+    "revision_timestamp_utc",
+    "notes"
+  ],
+  "shipment_event_log.csv": [
+    "event_id",
+    "case_id",
+    "po_id",
+    "event_type",
+    "event_timestamp_utc",
+    "event_location",
+    "carrier_reference",
+    "notes"
+  ],
+  "warehouse_receipt_log.csv": [
+    "receipt_id",
+    "case_id",
+    "po_id",
+    "received_at_utc",
+    "received_qty",
+    "receiving_site",
+    "receipt_status"
+  ],
+  "quality_inspection_log.csv": [
+    "inspection_id",
+    "case_id",
+    "po_id",
+    "inspected_qty",
+    "rejected_qty",
+    "disposition",
+    "quality_hold_required",
+    "notes"
+  ],
+  "supplier_contract_terms.csv": [
+    "supplier_tier",
+    "shortage_debit_per_unit_usd",
+    "damage_debit_per_unit_usd",
+    "max_supplier_debit_usd"
+  ],
+  "inventory_adjustment_ledger.csv": [
+    "adjustment_id",
+    "case_id",
+    "po_id",
+    "adjustment_type",
+    "quantity",
+    "amount_usd",
+    "posted_at_utc",
+    "notes"
+  ],
+  "expedite_authorizations.csv": [
+    "authorization_id",
+    "case_id",
+    "po_id",
+    "authorized_expedite_usd",
+    "authorization_status",
+    "authorized_at_utc"
+  ],
+  "freight_invoice_ledger.csv": [
+    "invoice_id",
+    "case_id",
+    "po_id",
+    "invoiced_expedite_usd",
+    "currency",
+    "posted_at_utc",
+    "reference_id"
+  ],
+  "supplier_scorecard.csv": [
+    "supplier_id",
+    "effective_date",
+    "qualification_status",
+    "otif_rolling_90d_pct",
+    "risk_notes"
+  ],
+  "duplicate_case_register.csv": [
+    "case_id",
+    "record_role",
+    "duplicate_of_case_id",
+    "duplicate_reason"
+  ]
+}

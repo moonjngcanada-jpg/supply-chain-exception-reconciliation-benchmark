@@ -1,0 +1,9 @@
+supplier_id,effective_date,qualification_status,otif_rolling_90d_pct,risk_notes
+SUP-A,2026-06-01,approved,91.0,stable
+SUP-B,2026-06-01,approved,88.0,capacity constrained
+SUP-C,2026-06-01,approved,94.0,quality event under review
+SUP-D,2026-06-01,approved,96.0,stable
+SUP-E,2026-06-01,approved,93.0,stable
+SUP-F,2026-06-01,approved,79.0,recovery plan active
+SUP-G,2026-06-01,approved,92.0,stable
+SUP-H,2026-06-01,conditional+,90.0,source value outside approved vocabulary

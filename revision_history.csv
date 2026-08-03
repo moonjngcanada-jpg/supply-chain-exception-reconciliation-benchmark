@@ -1,0 +1,3 @@
+revision_id,case_id,revised_field,old_value,new_value,revision_status,approved_by,revision_timestamp_utc,notes
+REV-804-DRAFT,SCM-2026-804,promised_delivery_date,2026-06-15,2026-06-17,superseded,,2026-06-15T09:00:00Z,planning draft
+REV-804-FINAL,SCM-2026-804,promised_delivery_date,2026-06-15,2026-06-18,approved,planning_manager,2026-06-15T14:30:00Z,supplier recovery plan approved
