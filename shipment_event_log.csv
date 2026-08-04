@@ -1,9 +1,0 @@
-event_id,case_id,po_id,event_type,event_timestamp_utc,event_location,carrier_reference,notes
-EV-801D,SCM-2026-801,PO-801,delivered,2026-06-12T13:00:00Z,Calgary DC,CREF-801,delivered complete
-EV-802D,SCM-2026-802,PO-802,delivered,2026-06-11T14:00:00Z,Calgary DC,CREF-802,partial delivery
-EV-803D,SCM-2026-803,PO-803,delivered,2026-06-14T15:00:00Z,Calgary DC,CREF-803,delivered to quarantine lane
-EV-804D,SCM-2026-804,PO-804,delivered,2026-06-17T11:00:00Z,Calgary DC,CREF-804,delivered complete
-EV-805D,SCM-2026-805,PO-805,delivered,2026-06-19T16:30:00Z,Calgary DC,proof received
-EV-806D,SCM-2026-806,PO-806,delivered,2026-06-22T17:00:00Z,Calgary DC,CREF-806,partial delivery
-EV-807D,SCM-2026-807,PO-807,delivered,2026-06-24T16:00:00Z,Calgary DC,CREF-807,overreceipt noted
-EV-808D,SCM-2026-808,PO-808,delivered,2026-06-27T12:00:00Z,Calgary DC,CREF-808,delivered complete
