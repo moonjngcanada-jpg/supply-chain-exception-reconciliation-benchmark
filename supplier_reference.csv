@@ -1,0 +1,12 @@
+source_file,record_type,lookup_key,supplier_id,supplier_tier,effective_date,qualification_status,otif_rolling_90d_pct,shortage_debit_per_unit_usd,damage_debit_per_unit_usd,max_supplier_debit_usd,notes
+supplier_contract_terms.csv,contract_terms,Gold,,Gold,,,,75.00,100.00,5000.00,
+supplier_contract_terms.csv,contract_terms,Silver,,Silver,,,,50.00,75.00,4000.00,
+supplier_contract_terms.csv,contract_terms,Bronze,,Bronze,,,,200.00,50.00,4000.00,
+supplier_scorecard.csv,supplier_scorecard,SUP-A,SUP-A,,2026-06-01,approved,91.0,,,,stable
+supplier_scorecard.csv,supplier_scorecard,SUP-B,SUP-B,,2026-06-01,approved,88.0,,,,capacity constrained
+supplier_scorecard.csv,supplier_scorecard,SUP-C,SUP-C,,2026-06-01,approved,94.0,,,,quality event under review
+supplier_scorecard.csv,supplier_scorecard,SUP-D,SUP-D,,2026-06-01,approved,96.0,,,,stable
+supplier_scorecard.csv,supplier_scorecard,SUP-E,SUP-E,,2026-06-01,approved,93.0,,,,stable
+supplier_scorecard.csv,supplier_scorecard,SUP-F,SUP-F,,2026-06-01,approved,79.0,,,,recovery plan active
+supplier_scorecard.csv,supplier_scorecard,SUP-G,SUP-G,,2026-06-01,approved,92.0,,,,stable
+supplier_scorecard.csv,supplier_scorecard,SUP-H,SUP-H,,2026-06-01,conditional+,90.0,,,,source value outside approved vocabulary

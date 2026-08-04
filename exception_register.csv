@@ -1,0 +1,4 @@
+source_file,record_type,record_id,case_id,related_case_id,revised_field,old_value,new_value,status,approved_by,event_timestamp_utc,reason,notes
+revision_history.csv,field_revision,REV-804-DRAFT,SCM-2026-804,,promised_delivery_date,2026-06-15,2026-06-17,superseded,,2026-06-15T09:00:00Z,,planning draft
+revision_history.csv,field_revision,REV-804-FINAL,SCM-2026-804,,promised_delivery_date,2026-06-15,2026-06-18,approved,planning_manager,2026-06-15T14:30:00Z,,supplier recovery plan approved
+duplicate_case_register.csv,duplicate_case,SCM-2026-809,SCM-2026-809,SCM-2026-806,,,,duplicate_only,,,"same PO, supplier, SKU, quantity, event sequence, and intake issue",

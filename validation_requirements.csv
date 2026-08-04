@@ -1,0 +1,27 @@
+sequence,section,file_or_output,record_id,check_name,expected,required_status_when_correct,notes
+1,source_schema,case_intake_register.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+2,source_schema,purchase_order_register.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+3,source_schema,supplier_acknowledgements.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+4,source_schema,fulfillment_records.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+5,source_schema,financial_records.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+6,source_schema,supplier_reference.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+7,source_schema,exception_register.csv,header,header_and_field_count,matches source_schema_manifest.csv,pass,Inspect the submitted source file directly.
+8,output_schema,supply_chain_case_decision_matrix.xlsx,case_decisions,worksheet_and_header_order,matches output_schema_manifest.csv,pass,The workbook must contain exactly the named worksheet.
+9,output_schema,supplier_otif_audit.xlsx,otif_audit,worksheet_and_header_order,matches output_schema_manifest.csv,pass,The workbook must contain exactly the named worksheet.
+10,output_schema,inventory_and_cost_reconciliation.xlsx,inventory_cost_reconciliation,worksheet_and_header_order,matches output_schema_manifest.csv,pass,The workbook must contain exactly the named worksheet.
+11,output_schema,shipment_exception_report.xlsx,shipment_exceptions,worksheet_and_header_order,matches output_schema_manifest.csv,pass,The workbook must contain exactly the named worksheet.
+12,output_schema,source_rejection_register.xlsx,source_rejections,worksheet_and_header_order,matches output_schema_manifest.csv,pass,The workbook must contain exactly the named worksheet.
+13,output_schema,data_integrity_validation_report.xlsx,validation_report,worksheet_and_header_order,matches output_schema_manifest.csv,pass,The workbook must contain exactly the named worksheet.
+14,population,three_active_case_workbooks,active_case_set,active_case_population,exactly SCM-2026-801 through SCM-2026-808,pass,"Apply to the decision matrix, OTIF audit, and inventory/cost reconciliation."
+15,duplicate_control,shipment_exception_report.xlsx,SCM-2026-809,duplicate_only_mapping,record_role=duplicate_only and duplicate_of_case_id=SCM-2026-806,pass,The duplicate is excluded from active-case workbooks.
+16,source_anomaly,fulfillment_records.csv,EV-805D,shipment_source_anomaly,source_field_count=7; expected_field_count=8; timestamp reliable; uncertainty_scope=carrier_reference|notes,warning,This is non-decision-critical uncertainty.
+17,source_conflict,financial_records.csv,ADJ-806,duplicate_key_conflict,two supplier_debit rows have conflicting amount_usd values; neither is selected or summed,warning,Dependent posted-debit and final-decision fields become Needs verification.
+18,source_anomaly,supplier_reference.csv,SUP-H,unsupported_qualification,source value retained; normalized supplier_qualification_status=Needs verification,warning,The uncertainty is decision-critical.
+19,cross_output_consistency,all_case_level_outputs,SCM-2026-801,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+20,cross_output_consistency,all_case_level_outputs,SCM-2026-802,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+21,cross_output_consistency,all_case_level_outputs,SCM-2026-803,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+22,cross_output_consistency,all_case_level_outputs,SCM-2026-804,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+23,cross_output_consistency,all_case_level_outputs,SCM-2026-805,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+24,cross_output_consistency,all_case_level_outputs,SCM-2026-806,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+25,cross_output_consistency,all_case_level_outputs,SCM-2026-807,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."
+26,cross_output_consistency,all_case_level_outputs,SCM-2026-808,shared_case_values,"OTIF, reconciliation, uncertainty scope, final status, and reason code agree wherever present",pass,"Compare the completed workbook artifacts, not narrative text."

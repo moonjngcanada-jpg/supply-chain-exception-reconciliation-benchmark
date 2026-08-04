@@ -1,0 +1,26 @@
+source_file,record_type,record_id,case_id,po_id,quantity,amount_usd,currency,status,event_timestamp_utc,reference_id,notes
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-801,SCM-2026-801,PO-801,0,0.00,,,2026-06-13T09:00:00Z,,no debit
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-802,SCM-2026-802,PO-802,0,0.00,,,2026-06-12T09:00:00Z,,debit not posted
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-803,SCM-2026-803,PO-803,-40,3500.00,,,2026-06-15T10:00:00Z,,shortage and damage debit
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-804,SCM-2026-804,PO-804,0,0.00,,,2026-06-18T10:00:00Z,,no debit
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-805,SCM-2026-805,PO-805,0,0.00,,,2026-06-20T10:00:00Z,,no debit
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-806,SCM-2026-806,PO-806,-20,4000.00,,,2026-06-23T10:00:00Z,,legacy export version A
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-806,SCM-2026-806,PO-806,-20,0.00,,,2026-06-23T10:00:00Z,,legacy export version B
+inventory_adjustment_ledger.csv,inventory_adjustment,ADJ-807,SCM-2026-807,PO-807,20,0.00,,,2026-06-25T10:00:00Z,,overreceipt adjustment pending
+inventory_adjustment_ledger.csv,supplier_debit,ADJ-808,SCM-2026-808,PO-808,0,0.00,,,2026-06-28T10:00:00Z,,no debit
+expedite_authorizations.csv,expedite_authorization,EXP-801,SCM-2026-801,PO-801,,0.00,,not_required,2026-06-09T09:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-802,SCM-2026-802,PO-802,,1500.00,,approved,2026-06-10T09:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-803,SCM-2026-803,PO-803,,0.00,,not_required,2026-06-13T09:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-804,SCM-2026-804,PO-804,,500.00,,approved,2026-06-15T15:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-805,SCM-2026-805,PO-805,,800.00,,approved,2026-06-19T09:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-806,SCM-2026-806,PO-806,,0.00,,not_required,2026-06-21T09:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-807,SCM-2026-807,PO-807,,0.00,,not_required,2026-06-24T09:00:00Z,,
+expedite_authorizations.csv,expedite_authorization,EXP-808,SCM-2026-808,PO-808,,300.00,,approved,2026-06-26T09:00:00Z,,
+freight_invoice_ledger.csv,freight_invoice,FINV-801,SCM-2026-801,PO-801,,0.00,USD,,2026-06-13T12:00:00Z,FR-801,
+freight_invoice_ledger.csv,freight_invoice,FINV-802,SCM-2026-802,PO-802,,1500.00,USD,,2026-06-12T12:00:00Z,FR-802,
+freight_invoice_ledger.csv,freight_invoice,FINV-803,SCM-2026-803,PO-803,,0.00,USD,,2026-06-15T12:00:00Z,FR-803,
+freight_invoice_ledger.csv,freight_invoice,FINV-804,SCM-2026-804,PO-804,,500.00,USD,,2026-06-18T12:00:00Z,FR-804,
+freight_invoice_ledger.csv,freight_invoice,FINV-805,SCM-2026-805,PO-805,,800.00,USD,,2026-06-20T12:00:00Z,FR-805,
+freight_invoice_ledger.csv,freight_invoice,FINV-806,SCM-2026-806,PO-806,,0.00,USD,,2026-06-23T12:00:00Z,FR-806,
+freight_invoice_ledger.csv,freight_invoice,FINV-807,SCM-2026-807,PO-807,,0.00,USD,,2026-06-25T12:00:00Z,FR-807,
+freight_invoice_ledger.csv,freight_invoice,FINV-808,SCM-2026-808,PO-808,,300.00,USD,,2026-06-28T12:00:00Z,FR-808,

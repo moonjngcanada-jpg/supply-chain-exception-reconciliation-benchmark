@@ -1,0 +1,73 @@
+SUPPLY CHAIN RECONCILIATION RULES
+Version: 2026.08 — consolidated 12-file packet
+
+S-1 — Field authority
+- case_intake_register.csv controls issue_type and requested_remediation.
+- purchase_order_register.csv controls PO, supplier, supplier tier, SKU, ordered quantity, unit cost, required date, and receiving site.
+- accepted supplier_acknowledgements.csv records control acknowledged quantity and promised delivery date unless an approved revision replaces that exact field.
+- fulfillment_records.csv controls delivered timestamp, received quantity, rejected quantity, disposition, and quality-hold status according to record_type.
+- financial_records.csv controls posted supplier debit, authorized expedite amount, and invoiced expedite amount according to record_type.
+- supplier_reference.csv controls supplier-tier rates/caps and the source qualification value according to record_type.
+- exception_register.csv controls approved revisions and duplicate-only status.
+
+R-1 — Revision handling
+- Apply an approved field_revision only to revised_field.
+- Reject a superseded field_revision.
+- Preserve unrelated values from their ordinary controlling sources.
+
+I-1 — Shipment source anomaly
+- Compare source_field_count with expected_field_count in fulfillment_records.csv.
+- When a shipment_delivery record has 7 instead of 8 original fields, the first six original fields remain reliable.
+- raw_tail_value cannot be assigned uniquely to carrier_reference or notes.
+- Preserve the delivered timestamp, set uncertainty_scope=carrier_reference|notes, and do not place the case on a verification hold solely for this non-decision-critical anomaly.
+
+L-1 — Duplicate-key ledger conflict
+- Before using supplier_debit records, group financial_records.csv by record_id.
+- When the same record_id has different amount_usd values and no record is explicitly marked reversal, void, correction, or replacement, classify ledger_integrity_status=duplicate_key_conflict.
+- Do not sum the rows and do not select one by order, timestamp, or agreement with the calculated entitlement.
+- Set posted_supplier_debit_usd, supplier_debit_delta_usd, supplier_debit_status, reconciliation_status, and the dependent final decision to Needs verification.
+
+Q-1 — Quantity calculations
+- usable_received_qty = received_qty - rejected_qty.
+- shortage_qty = max(ordered_qty - usable_received_qty, 0).
+- overreceipt_qty = max(usable_received_qty - ordered_qty, 0).
+
+O-1 — OTIF
+- on_time_result=Pass when actual_delivery_date <= promised_delivery_date; otherwise Fail.
+- in_full_result=Pass when usable_received_qty >= ordered_qty; otherwise Fail.
+- otif_result=Pass only when both components Pass; otherwise Fail.
+
+F-1 — Supplier debit
+- supplier_debit_eligible_usd = min(shortage_qty * shortage_rate + rejected_qty * damage_rate, debit_cap).
+- supplier_debit_delta_usd = supplier_debit_eligible_usd - posted_supplier_debit_usd.
+- delta 0=Matched; positive=Pending; negative=Overposted.
+- An uncertain posted amount produces Needs verification.
+
+F-2 — Expedite reconciliation
+- expedite_delta_usd = authorized_expedite_usd - invoiced_expedite_usd.
+- delta 0=Matched; positive=Pending; negative=Overbilled.
+
+C-1 — Overall reconciliation precedence
+1. Needs verification
+2. Pending
+3. Overposted
+4. Matched
+
+V-1 — Qualification vocabulary
+- Allowed normalized values: approved, restricted, suspended.
+- Preserve an unsupported source value in evidence, but set supplier_qualification_status=Needs verification.
+
+P-1 — Final-case-status precedence
+1. Needs verification — SOURCE_FIELD_UNCERTAIN
+2. Compliance hold — QUALITY_OR_COMPLIANCE_HOLD
+3. Financial action pending — SUPPLIER_DEBIT_PENDING
+4. Overreceipt review — OVERRECEIPT
+5. Supplier corrective action — OTIF_FAILURE
+6. Ready to close — NO_BLOCKER
+
+D-1 — Duplicate case
+- SCM-2026-809 is duplicate_only of SCM-2026-806.
+- Exclude it from active-case workbooks and retain it in the exception, rejection, and validation outputs.
+
+A-1 — Action fields
+- required_action fields are standardized artifact labels only. They do not authorize or request real-world contact, payment, inventory, hold, or supplier actions.

@@ -1,0 +1,9 @@
+ack_id,case_id,po_id,acknowledged_qty,promised_delivery_date,ack_status,notes
+ACK-801,SCM-2026-801,PO-801,100,2026-06-10,accepted,standard acknowledgement
+ACK-802,SCM-2026-802,PO-802,250,2026-06-11,accepted,standard acknowledgement
+ACK-803,SCM-2026-803,PO-803,80,2026-06-14,accepted,standard acknowledgement
+ACK-804,SCM-2026-804,PO-804,150,2026-06-15,accepted,date later revised
+ACK-805,SCM-2026-805,PO-805,120,2026-06-20,accepted,standard acknowledgement
+ACK-806,SCM-2026-806,PO-806,500,2026-06-22,accepted,standard acknowledgement
+ACK-807,SCM-2026-807,PO-807,60,2026-06-25,accepted,standard acknowledgement
+ACK-808,SCM-2026-808,PO-808,200,2026-06-27,accepted,standard acknowledgement
