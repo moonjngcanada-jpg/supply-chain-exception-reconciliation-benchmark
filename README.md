@@ -1,18 +1,9 @@
 # Supply Chain Exception Reconciliation Benchmark
 
-A source-grounded benchmark for purchase-order, receipt, OTIF, supplier-debit, expedite-cost, supplier-risk, malformed-row, revision, and duplicate-case reconciliation.
+A source-grounded benchmark for purchase-order, receipt, OTIF, supplier-debit, expedite-cost, supplier-risk, revision, source-integrity, and duplicate-case reconciliation.
 
-## Design
-The prompt is intentionally short. Exact output schemas are stored in `output_schema_manifest.json`, source schemas in `source_schema_manifest.json`, and decision logic in the rules files.
+The benchmark uses the existing file set. Its central reasoning test is parser-safe: the adjustment ledger contains a duplicate-key conflict with different posted amounts. A correct solution must avoid summing or selecting one conflicting row and must propagate decision-critical uncertainty. A separate malformed shipment row tests whether non-critical uncertainty is correctly contained.
 
-The central reasoning test is field-scoped uncertainty:
-- one malformed shipment row preserves a reliable delivery timestamp while leaving only trailing evidence fields uncertain;
-- one malformed adjustment row leaves the posted supplier-debit amount ambiguous, so the uncertainty must propagate through financial reconciliation and final status.
+Evaluate the six submitted `.xlsx` workbooks directly, not the model’s narrative response.
 
-This distinction is intended to produce reasoning-based model separation rather than a formatting-only failure.
-
-## Evaluation
-Evaluate the six submitted `.xlsx` workbooks directly. Do not run rubrics against narrative model text.
-
-## License
-CC0 1.0 Universal.
+License: CC0 1.0 Universal.
